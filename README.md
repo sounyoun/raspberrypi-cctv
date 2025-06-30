@@ -37,7 +37,7 @@
 
    ![웹 브라우저 화면](images/web-demo.png)
    
-   - 발표 자료 (시연 영상) : [youtube 링크](https://youtu.be/27KshG3Z6lI)
+   - 발표 자료 (시연 영상): [youtube 링크](https://youtu.be/27KshG3Z6lI)
 
 <p align="center">
     <a href="https://youtu.be/27KshG3Z6lI">
