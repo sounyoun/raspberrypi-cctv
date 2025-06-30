@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CCTV와 거리측정</title>
+    <!-- 외부 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" type="text/javascript"></script>
+    <!-- 내부 JavaScript 파일 -->
+    <script src="/static/myChart.js" type="text/javascript"></script>
+    <script src="/static/mqttio.js" type="text/javascript"></script>
+    <script>
+        // window 객체에 load 이벤트가 발생하면 2개의 함수 실행
+        window.addEventListener("load", drawChart); // load 이벤트에서 drawChart() 호출
+        window.addEventListener("load", function() {
+            // 현재 URL에서 브로커 IP 추출
+            let url = new String(document.location);
+            ip = (url.split("//"))[1]; // "192....:8080/"
+            ip = (ip.split(":"))[0]; // "192...."
+            document.getElementById("broker").value = ip;
+        });
+    </script>
+</head>
+<body>
+    <h2>CCTV</h2>
+    <!-- 실시간 스트리밍 -->
+    <div>
+        <img src="/video_feed" alt="실시간 카메라" style="width:600px; height:400px; border:1px solid black;">
+    </div>
+    <hr>
+    <!-- MQTT 브로커 연결 -->
+    <h3>브로커 연결/취소</h3>
+    <form id="connection-form">
+        <b>브로커 IP : </b>
+        <input id="broker" type="text" name="broker" value=""><br>
+        <b>포트 번호 : 9001</b><br>
+        <input type="button" onclick="connect()" value="Connect">
+        <input type="button" onclick="disconnect()" value="Disconnect">
+    </form>
+    <hr>
+    <h3>거리 측정</h3>
+    <!-- 차트 제어 -->
+    <form id="subscribe-form">
+        <input type="button" onclick="subscribe('ultrasonic')" value="차트 그리기">
+        <input type="button" onclick="unsubscribe('ultrasonic')" value="차트 중단하기">
+    </form>
+    <!-- 차트와 hide/show -->
+    <button id="hideshow" onclick="hideshow()">Hide/Show Chart</button>
+    <div>
+        <canvas id="canvas" width="600" height="400"></canvas>
+    </div>
+    <div id="messages"></div>
+</body>
+</html>
