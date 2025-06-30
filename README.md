@@ -5,7 +5,7 @@
    - 실시간 CCTV 영상 스트리밍
    - 거리 측정 데이터를 실시간으로 시각화
    할 수 있는 시스템
-   ![응용 시스템 구조 사진](images/system-diagram.png)
+   ![응용 시스템 구조](images/system-diagram.png)
 ## 2. 주요 기능
    - 실시간 CCTV 영상 스트리밍 (Flask)
    - LED 원격 제어 (MQTT)
@@ -15,13 +15,13 @@
    - 하드웨어: 라즈베리파이, 카메라, 초음파 센서, LED
    ![회로 사진](images/circuit.png)
    - 소프트웨어 구성
+   ![디렉터리 구조](images/project-structure.png)
      - cctv-app.py: Flask 웹 서버
      - cctv-mqtt.py: 브로커에 연결해 거리 데이터 전송
      - circuit.py: GPIO 제어
      - mqttio.js: 브로커 관련 함수
      - myChart.js: 거리 데이터 시각화
      - cctv.html: 웹 UI
-   ![디렉터리 구조 사진](images/project-structure.png)
 ## 4. 실행 및 결과
    - 웹 브라우저에서 라즈베리파이 IP로 접속
    ![웹 브라우저 화면](images/web-demo.png)
