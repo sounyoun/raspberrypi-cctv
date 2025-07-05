@@ -7,7 +7,7 @@
 
    할 수 있는 시스템
 
-   ![응용 시스템 구조](images/system-diagram.png)
+   <img src="images/system-diagram.png" alt="시스템 구조" width="600">
 
    
 ## 주요 기능
@@ -21,7 +21,7 @@
 ## 구현 방법
    - **하드웨어**: 라즈베리파이, 카메라, 초음파 센서, LED
 
-   ![회로 사진](images/circuit.png)
+   <img src="images/circuit.png" alt="회로 사진" width="600">
    
    - **소프트웨어 구성**   
      - cctv-app.py: Flask 웹 서버
@@ -30,15 +30,15 @@
      - mqttio.js: 브로커 관련 함수
      - myChart.js: 거리 데이터 시각화
      - cctv.html: 웹 UI
-       
-   ![디렉터리 구조](images/project-structure.png)
+
+   <img src="images/project-structure.png" alt="디렉터리 구조" width="600">
 
      
 ## 실행 및 결과
 
    - 웹 브라우저에서 라즈베리파이 IP로 접속
 
-   ![웹 브라우저 화면](images/web-demo.png)
+   <img src="images/web-demo.png" alt="웹 브라우저 화면" width="600">
    
    - 발표 자료 (시연 영상): [youtube 링크](https://youtu.be/27KshG3Z6lI)
 
