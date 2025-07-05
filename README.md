@@ -47,7 +47,7 @@
    
    - 발표 자료 (시연 영상): [youtube 링크](https://youtu.be/27KshG3Z6lI)
 
-<p align="center">
+<p>
     <a href="https://youtu.be/27KshG3Z6lI">
         <img src="https://img.youtube.com/vi/27KshG3Z6lI/0.jpg" alt="시연 영상 썸네일">
     </a>
